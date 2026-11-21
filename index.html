@@ -91,7 +91,22 @@
             margin-bottom: 15px;
         }
 
-        .contact {
+        .contact {<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Have a question or want to work with me? Send me a message below.</p>  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required>
+
+<input type="text" name="subject" placeholder="Subject" required>
+
+<textarea name="message" placeholder="Write your message here..." rows="6" required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New message from Markus Riva Website">
+
+<button type="submit">Send Message</button>
+
+  </form>
+</section>
             background: #111a30;
         }
 
