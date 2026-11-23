@@ -1,7 +1,8 @@
 <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MARKUS RIVA | Artist Website</title><meta name="description" content="Discover Markus Riva's music, videos, entertainment and latest updates."><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MARKUS RIVA | Artist Website</title>
+<meta name="description" content="Discover Markus Riva's music, videos, entertainment and latest updates."><style>
 * {
     margin: 0;
     padding: 0;
@@ -204,6 +205,103 @@ section h2 {
     border: none !important;
 }
 
+/* UNRELEASED ALBUMS */
+
+.album-section {
+    background: linear-gradient(180deg, #101010, #080808);
+    border-top: 1px solid #51452e;
+    border-bottom: 1px solid #51452e;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: 40px auto 0;
+}
+
+.album-card {
+    background: linear-gradient(145deg, #252525, #101010);
+    border: 1px solid #665638;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+    border-color: #d8bd82;
+}
+
+.album-cover {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:
+    radial-gradient(circle at center, #55452b, #191919 65%, #080808);
+    border-bottom: 1px solid #665638;
+}
+
+.album-cover span {
+    color: #d8bd82;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.album-cover strong {
+    color: #fff;
+    font-size: 27px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.album-info {
+    padding: 23px 15px;
+}
+
+.album-info h3 {
+    color: #d8bd82;
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.album-info p {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.album-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 13px;
+    color: #d8bd82;
+    border: 1px solid #a88b50;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.subscribe-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #111;
+    background: #d8bd82;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.subscribe-btn:hover {
+    background: white;
+}
+
 footer {
     padding: 30px 15px;
     text-align: center;
@@ -242,11 +340,11 @@ footer span {
     <a href="#home">HOME</a>
     <a href="#about">ABOUT</a>
     <a href="#music">MUSIC</a>
+    <a href="#albums">ALBUMS</a>
     <a href="#social">SOCIAL</a>
     <a href="#contact">CONTACT</a>
-</nav><div class="hero" id="home"><small>THE OFFICIAL ARTIST EXPERIENCE</small>
-
-<h1>MARKUS RIVA</h1>
+</nav><div class="hero" id="home">
+    <small>THE OFFICIAL ARTIST EXPERIENCE</small><h1>MARKUS RIVA</h1>
 
 <div class="gold-line"></div>
 
@@ -262,9 +360,8 @@ footer span {
     target="_blank">WATCH VIDEOS</a>
 </div>
 
-</div><section id="about"><h2>ABOUT MARKUS</h2>
-
-<div class="gold-line"></div>
+</div><section id="about">
+    <h2>ABOUT MARKUS</h2><div class="gold-line"></div>
 
 <p class="about">
     Markus Riva, born Miķelis Ļaksa, is a Latvian
@@ -277,9 +374,8 @@ footer span {
     the world.
 </p>
 
-</section><section id="music"><h2>MUSIC & VIDEOS</h2>
-
-<p class="subtitle">
+</section><section id="music">
+    <h2>MUSIC & VIDEOS</h2><p class="subtitle">
     Explore the sound and creativity of Markus Riva.
 </p>
 
@@ -301,9 +397,105 @@ footer span {
 
 </div>
 
-</section><section id="social"><h2>FOLLOW MARKUS</h2>
+</section><!-- NEW UNRELEASED ALBUM SECTION --><section id="albums" class="album-section"><h2>UNRELEASED ALBUMS</h2>
+
+<div class="gold-line"></div>
 
 <p class="subtitle">
+    Exclusive upcoming music projects.
+    Subscribe to stay updated on future releases.
+</p>
+
+<div class="album-grid">
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>01</strong>
+        </div>
+        <div class="album-info">
+            <h3>GOLDEN ERA</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>02</strong>
+        </div>
+        <div class="album-info">
+            <h3>AFTER DARK</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>03</strong>
+        </div>
+        <div class="album-info">
+            <h3>INFINITY</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>04</strong>
+        </div>
+        <div class="album-info">
+            <h3>THE NEW CHAPTER</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>05</strong>
+        </div>
+        <div class="album-info">
+            <h3>NO LIMITS</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>06</strong>
+        </div>
+        <div class="album-info">
+            <h3>BEYOND THE LIGHTS</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+</div>
+
+</section><section id="social">
+    <h2>FOLLOW MARKUS</h2><p class="subtitle">
     Connect with Markus Riva on social media.
 </p>
 
@@ -320,9 +512,8 @@ footer span {
 
 </div>
 
-</section><section id="contact"><h2>BUSINESS CONTACT</h2>
-
-<p class="subtitle">
+</section><section id="contact">
+    <h2>BUSINESS CONTACT</h2><p class="subtitle">
     For enquiries and business opportunities.
 </p>
 
@@ -344,9 +535,8 @@ footer span {
 
 </div>
 
-</section><footer><p>© 2026 <span>MARKUS RIVA</span>. All Rights Reserved.</p>
-
-<p style="margin-top:8px">
+</section><footer>
+    <p>© 2026 <span>MARKUS RIVA</span>. All Rights Reserved.</p><p style="margin-top:8px">
     MUSIC • PASSION • EXCELLENCE
 </p>
 
