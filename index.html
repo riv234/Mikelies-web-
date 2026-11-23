@@ -4,264 +4,299 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MARKUS RIVA | Official Website</title>
+<title>MARKUS RIVA | Official Artist Website</title>
+
+<meta name="description" content="Discover Markus Riva, his music, videos and official social media channels.">
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: #080808;
-  color: white;
-  font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 7%;
-  background: #080808;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+header {
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292929;
 }
 
 .logo {
-  color: #d4af37;
-  font-size: 23px;
-  font-weight: bold;
-  letter-spacing: 3px;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #d6b46a;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 13px;
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 13px;
 }
 
 .hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-  background:
-  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85)),
-  url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1800");
-  background-position: center;
-  background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+    url("images/markus-riva.jpg") center/cover no-repeat;
 }
 
-.hero h1 {
-  font-size: clamp(45px, 10vw, 95px);
-  color: #d4af37;
-  letter-spacing: 6px;
+.hero-content h1 {
+    font-size: clamp(45px, 9vw, 90px);
+    letter-spacing: 8px;
+    color: #e5c47c;
 }
 
-.hero h3 {
-  letter-spacing: 5px;
-  margin-top: 15px;
-}
-
-.hero p {
-  margin: 20px 0;
+.hero-content p {
+    margin: 20px 0;
+    letter-spacing: 4px;
+    color: #eee;
 }
 
 .btn {
-  display: inline-block;
-  padding: 14px 25px;
-  margin: 8px;
-  background: #d4af37;
-  color: #080808;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+    display: inline-block;
+    padding: 14px 25px;
+    margin: 8px;
+    border: 1px solid #d6b46a;
+    color: #d6b46a;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d6b46a;
+    color: black;
 }
 
 section {
-  padding: 70px 7%;
-  text-align: center;
+    padding: 65px 20px;
+    text-align: center;
 }
 
 h2 {
-  color: #d4af37;
-  font-size: 32px;
-  margin-bottom: 25px;
+    color: #d6b46a;
+    font-size: 30px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
 }
 
 .about {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    color: #ccc;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.gallery img {
-  width: 100%;
-  height: 330px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: .3s;
+.card {
+    background: #151515;
+    border: 1px solid #333;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
+.card h3 {
+    color: #e5c47c;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
 }
 
 .social {
-  background: #111;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .social a {
-  display: inline-block;
-  padding: 16px 28px;
-  margin: 10px;
-  border: 1px solid #d4af37;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    min-width: 145px;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    background: #171717;
+    border: 1px solid #d6b46a;
+    border-radius: 5px;
+    transition: .3s;
 }
 
 .social a:hover {
-  background: #d4af37;
-  color: black;
+    background: #d6b46a;
+    color: black;
 }
 
-.music {
-  background: #080808;
-}
-
-.contact {
-  background: #111;
-  line-height: 2;
+.contact p {
+    color: #ccc;
+    margin: 15px;
 }
 
 footer {
-  background: black;
-  padding: 30px;
-  text-align: center;
-  color: #aaa;
+    padding: 30px;
+    background: #111;
+    text-align: center;
+    color: #999;
+    border-top: 1px solid #333;
 }
 
 @media(max-width:600px) {
-  nav {
-    flex-direction: column;
-    gap: 15px;
-  }
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
 
-  nav a {
-    margin: 5px;
-  }
+    nav a {
+        margin: 7px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<div class="logo">MARKUS RIVA</div>
+<header>
+    <div class="logo">MARKUS RIVA</div>
 
-<div>
-<a href="#home">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#gallery">PHOTOS</a>
-<a href="#social">SOCIAL</a>
-<a href="#contact">CONTACT</a>
-</div>
-</nav>
-
-<header class="hero" id="home">
-<div>
-<h1>MARKUS RIVA</h1>
-<h3>OFFICIAL ARTIST WEBSITE</h3>
-<p>Music | Entertainment | Lifestyle</p>
-
-<a href="#social" class="btn">FOLLOW MARKUS</a>
-<a href="#gallery" class="btn">EXPLORE PHOTOS</a>
-</div>
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#music">MUSIC</a>
+        <a href="#social">SOCIAL</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
 </header>
 
+<div class="hero">
+    <div class="hero-content">
+        <h1>MARKUS RIVA</h1>
+        <p>SINGER • SONGWRITER • PRODUCER • DJ</p>
+
+        <a class="btn"
+        href="https://markus-riva.com/"
+        target="_blank">OFFICIAL WEBSITE</a>
+
+        <a class="btn"
+        href="https://www.youtube.com/channel/UCMBOHDpeP0dmoOr3yjdGPsw"
+        target="_blank">WATCH VIDEOS</a>
+    </div>
+</div>
+
 <section id="about">
-<h2>WELCOME TO MARKUS RIVA</h2>
+    <h2>ABOUT MARKUS</h2>
 
-<div class="about">
-<p>
-Welcome to the official online destination of Markus Riva.
-Explore music, discover videos, enjoy photos and stay
-connected with the latest updates.
-</p>
-</div>
+    <div class="about">
+        Markus Riva, born Miķelis Ļaksa, is a Latvian
+        singer, songwriter, music producer, DJ, actor
+        and television personality.
+
+        <br><br>
+
+        Known for his versatility and international
+        musical style, Markus creates music in several
+        languages and continues to connect with fans
+        around the world.
+    </div>
 </section>
 
-<section id="gallery">
-<h2>ARTIST GALLERY</h2>
+<section id="music">
+    <h2>MUSIC & VIDEOS</h2>
 
-<div class="gallery">
+    <div class="cards">
 
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900" alt="Artist portrait">
+        <div class="card">
+            <h3>YOUTUBE</h3>
+            <p>Watch official music videos and performances.</p>
+            <br>
+            <a class="btn"
+            href="https://www.youtube.com/channel/UCMBOHDpeP0dmoOr3yjdGPsw"
+            target="_blank">WATCH NOW</a>
+        </div>
 
-<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=900" alt="Performer">
+        <div class="card">
+            <h3>OFFICIAL MUSIC</h3>
+            <p>Discover Markus Riva's music and latest releases.</p>
+            <br>
+            <a class="btn"
+            href="https://markus-riva.com/"
+            target="_blank">EXPLORE MUSIC</a>
+        </div>
 
-<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900" alt="Artist portrait">
-
-</div>
+    </div>
 </section>
 
-<section class="social" id="social">
-<h2>FOLLOW MARKUS RIVA</h2>
+<section id="social">
+    <h2>FOLLOW MARKUS RIVA</h2>
 
-<p>Connect with Markus on his official social media pages.</p>
+    <div class="social">
 
-<a href="YOUR_YOUTUBE_LINK" target="_blank">▶ YOUTUBE</a>
+        <a href="https://www.instagram.com/markusriva/"
+        target="_blank">INSTAGRAM</a>
 
-<a href="YOUR_TIKTOK_LINK" target="_blank">♪ TIKTOK</a>
+        <a href="https://www.tiktok.com/@markusrivaofficial"
+        target="_blank">TIKTOK</a>
 
-<a href="YOUR_FACEBOOK_LINK" target="_blank">f FACEBOOK</a>
+        <a href="https://www.youtube.com/channel/UCMBOHDpeP0dmoOr3yjdGPsw"
+        target="_blank">YOUTUBE</a>
 
+        <a href="https://www.facebook.com/search/top?q=Markus%20Riva"
+        target="_blank">FACEBOOK</a>
+
+        <a href="https://markus-riva.com/"
+        target="_blank">OFFICIAL WEBSITE</a>
+
+    </div>
 </section>
 
-<section class="music">
-<h2>MUSIC & VIDEOS</h2>
+<section id="contact" class="contact">
+    <h2>CONTACT</h2>
 
-<p>Discover the latest music and videos.</p>
+    <p>For professional enquiries and bookings:</p>
 
-<a href="YOUR_YOUTUBE_LINK" target="_blank" class="btn">
-WATCH MUSIC VIDEOS
-</a>
+    <a class="btn"
+    href="mailto:markusriva@markus-riva.com">
+    SEND EMAIL
+    </a>
 
-</section>
+    <br>
 
-<section class="contact" id="contact">
-<h2>GET IN TOUCH</h2>
-
-<p>Email: agbedordavid51@gmail.com</p>
-
-<a href="https://wa.me/2340000000000?text=Hello%20Markus%20Riva" 
-class="btn" target="_blank">
-WHATSAPP BUSINESS
-</a>
+    <a class="btn"
+    href="https://markus-riva.com/"
+    target="_blank">MANAGEMENT & BOOKINGS</a>
 
 </section>
 
 <footer>
-<p>© 2026 MARKUS RIVA</p>
-<p>Official Artist Website</p>
+    <p>© 2026 MARKUS RIVA. All Rights Reserved.</p>
+    <p>Official Artist Website</p>
 </footer>
 
 </body>
