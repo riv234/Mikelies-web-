@@ -3,122 +3,264 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markus Riva | Official Website</title>
+
+<title>MARKUS RIVA | Official Website</title>
 
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- background:#080808;
- color:white;
- font-family:Arial,sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{
- background:#111;
- padding:20px;
- text-align:center;
+
+html {
+  scroll-behavior: smooth;
 }
-header h1{color:gold;font-size:32px}
-nav a{
- color:white;
- margin:10px;
- text-decoration:none;
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
 }
-.hero{
- text-align:center;
- padding:65px 20px;
- background:linear-gradient(#0009,#000b);
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: #080808;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-.hero h2{font-size:38px;color:gold}
-button{
- background:gold;
- border:0;
- padding:13px 24px;
- border-radius:25px;
- font-weight:bold;
+
+.logo {
+  color: #d4af37;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
-section{padding:35px 18px;text-align:center}
-h2{color:gold}
-.gallery{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:12px;
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 13px;
 }
-.gallery img{
- width:100%;
- height:220px;
- object-fit:cover;
- border-radius:12px;
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+  linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85)),
+  url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1800");
+  background-position: center;
+  background-size: cover;
 }
-.social a{
- display:inline-block;
- margin:8px;
- padding:14px 20px;
- background:gold;
- color:black;
- text-decoration:none;
- border-radius:25px;
- font-weight:bold;
+
+.hero h1 {
+  font-size: clamp(45px, 10vw, 95px);
+  color: #d4af37;
+  letter-spacing: 6px;
 }
-footer{
- background:#111;
- text-align:center;
- padding:25px;
- color:#aaa;
+
+.hero h3 {
+  letter-spacing: 5px;
+  margin-top: 15px;
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  margin: 8px;
+  background: #d4af37;
+  color: #080808;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+section {
+  padding: 70px 7%;
+  text-align: center;
+}
+
+h2 {
+  color: #d4af37;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.about {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.social {
+  background: #111;
+}
+
+.social a {
+  display: inline-block;
+  padding: 16px 28px;
+  margin: 10px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social a:hover {
+  background: #d4af37;
+  color: black;
+}
+
+.music {
+  background: #080808;
+}
+
+.contact {
+  background: #111;
+  line-height: 2;
+}
+
+footer {
+  background: black;
+  padding: 30px;
+  text-align: center;
+  color: #aaa;
+}
+
+@media(max-width:600px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 5px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>MARKUS RIVA</h1>
 <nav>
-<a href="#home">Home</a>
-<a href="#gallery">Photos</a>
-<a href="#music">Music</a>
-<a href="#social">Social Media</a>
+<div class="logo">MARKUS RIVA</div>
+
+<div>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#gallery">PHOTOS</a>
+<a href="#social">SOCIAL</a>
+<a href="#contact">CONTACT</a>
+</div>
 </nav>
+
+<header class="hero" id="home">
+<div>
+<h1>MARKUS RIVA</h1>
+<h3>OFFICIAL ARTIST WEBSITE</h3>
+<p>Music | Entertainment | Lifestyle</p>
+
+<a href="#social" class="btn">FOLLOW MARKUS</a>
+<a href="#gallery" class="btn">EXPLORE PHOTOS</a>
+</div>
 </header>
 
-<div class="hero" id="home">
+<section id="about">
 <h2>WELCOME TO MARKUS RIVA</h2>
-<p>Official Artist Website</p>
-<p>Music • Videos • Entertainment</p>
+
+<div class="about">
+<p>
+Welcome to the official online destination of Markus Riva.
+Explore music, discover videos, enjoy photos and stay
+connected with the latest updates.
+</p>
 </div>
+</section>
 
 <section id="gallery">
-<h2>PHOTO GALLERY</h2>
+<h2>ARTIST GALLERY</h2>
+
 <div class="gallery">
-<img src="images/photo1.jpg" alt="Markus Riva photo 1">
-<img src="images/photo2.jpg" alt="Markus Riva photo 2">
-<img src="images/photo3.jpg" alt="Markus Riva photo 3">
-<img src="images/photo4.jpg" alt="Markus Riva photo 4">
-<img src="images/photo5.jpg" alt="Markus Riva photo 5">
-<img src="images/photo6.jpg" alt="Markus Riva photo 6">
-<img src="images/photo7.jpg" alt="Markus Riva photo 7">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900" alt="Artist portrait">
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=900" alt="Performer">
+
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900" alt="Artist portrait">
+
 </div>
 </section>
 
-<section id="music">
-<h2>MUSIC & VIDEOS</h2>
-<p>Discover Markus Riva's music and latest videos.</p>
-<div class="social">
-<a href="https://www.youtube.com/@MarkusRiva" target="_blank">YouTube</a>
-</div>
-</section>
-
-<section id="social">
+<section class="social" id="social">
 <h2>FOLLOW MARKUS RIVA</h2>
-<div class="social">
-<a href="https://www.youtube.com/@MarkusRiva" target="_blank">YouTube</a>
-<a href="https://www.tiktok.com/@markusrivaofficial" target="_blank">TikTok</a>
-<a href="https://www.facebook.com/MarkusRivaOfficial" target="_blank">Facebook</a>
-</div>
+
+<p>Connect with Markus on his official social media pages.</p>
+
+<a href="YOUR_YOUTUBE_LINK" target="_blank">▶ YOUTUBE</a>
+
+<a href="YOUR_TIKTOK_LINK" target="_blank">♪ TIKTOK</a>
+
+<a href="YOUR_FACEBOOK_LINK" target="_blank">f FACEBOOK</a>
+
+</section>
+
+<section class="music">
+<h2>MUSIC & VIDEOS</h2>
+
+<p>Discover the latest music and videos.</p>
+
+<a href="YOUR_YOUTUBE_LINK" target="_blank" class="btn">
+WATCH MUSIC VIDEOS
+</a>
+
+</section>
+
+<section class="contact" id="contact">
+<h2>GET IN TOUCH</h2>
+
+<p>Email: agbedordavid51@gmail.com</p>
+
+<a href="https://wa.me/2340000000000?text=Hello%20Markus%20Riva" 
+class="btn" target="_blank">
+WHATSAPP BUSINESS
+</a>
+
 </section>
 
 <footer>
-<p>© 2026 Markus Riva. All Rights Reserved.</p>
+<p>© 2026 MARKUS RIVA</p>
 <p>Official Artist Website</p>
 </footer>
 
