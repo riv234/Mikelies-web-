@@ -1,4 +1,313 @@
-/* MARKUS RIVA MUSIC PLAYER */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MARKUS RIVA | Artist Website</title>
+<meta name="description" content="Discover Markus Riva's music, videos, entertainment and latest updates.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+    radial-gradient(ellipse at top, #29251d 0%, #111111 45%, #050505 100%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 1px solid #a88b50;
+    background: rgba(0,0,0,0.85);
+}
+
+.logo {
+    font-size: 30px;
+    letter-spacing: 7px;
+    color: #d8bd82;
+    font-weight: bold;
+}
+
+header p {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 17px 10px;
+    background: #111;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #d8bd82;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 110px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.88)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Markus_Riva_%28Jan_2025%29.png");
+    background-size: cover;
+    background-position: center 25%;
+}
+
+.hero small {
+    color: #d8bd82;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 8vw, 75px);
+    letter-spacing: 7px;
+    margin: 15px 0;
+}
+
+.hero p {
+    color: #ccc;
+    max-width: 600px;
+    margin: auto;
+}
+
+.gold-line {
+    width: 65px;
+    height: 2px;
+    background: #d8bd82;
+    margin: 25px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 8px;
+    text-decoration: none;
+    color: #111;
+    background: #d8bd82;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #d8bd82;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.about {
+    max-width: 750px;
+    margin: auto;
+    color: #bbb;
+    line-height: 2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 950px;
+    margin: 35px auto 0;
+}
+
+.card {
+    padding: 35px 20px;
+    background: linear-gradient(145deg, #242424, #111);
+    border: 1px solid #51452e;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #d8bd82;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.social-buttons a {
+    min-width: 140px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    background: #202020;
+    border: 1px solid #a88b50;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.social-buttons a:hover {
+    background: #d8bd82;
+    color: #111;
+}
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 20px;
+    background: #171717;
+    border: 1px solid #51452e;
+}
+
+.whatsapp {
+    background: #176c46 !important;
+    border: none !important;
+}
+
+/* UNRELEASED ALBUMS */
+
+.album-section {
+    background: linear-gradient(180deg, #101010, #080808);
+    border-top: 1px solid #51452e;
+    border-bottom: 1px solid #51452e;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    max-width: 1050px;
+    margin: 40px auto 0;
+}
+
+.album-card {
+    background: linear-gradient(145deg, #252525, #101010);
+    border: 1px solid #665638;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+    border-color: #d8bd82;
+}
+
+.album-cover {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:
+    radial-gradient(circle at center, #55452b, #191919 65%, #080808);
+    border-bottom: 1px solid #665638;
+}
+
+.album-cover span {
+    color: #d8bd82;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.album-cover strong {
+    color: #fff;
+    font-size: 27px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.album-info {
+    padding: 23px 15px;
+}
+
+.album-info h3 {
+    color: #d8bd82;
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.album-info p {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.album-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 13px;
+    color: #d8bd82;
+    border: 1px solid #a88b50;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.subscribe-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #111;
+    background: #d8bd82;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.subscribe-btn:hover {
+    background: white;
+}
+
+/* MUSIC PLAYER ADDITION */
 
 .music-player-section {
     max-width: 950px;
@@ -30,3 +339,313 @@
     text-align: left;
     max-width: 400px;
 }
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    background: #080808;
+    border-top: 1px solid #51452e;
+    color: #777;
+    font-size: 12px;
+}
+
+footer span {
+    color: #d8bd82;
+}
+
+@media(max-width: 600px) {
+    .hero {
+        min-height: 400px;
+        padding: 75px 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MARKUS RIVA</div>
+    <p>MUSIC • ENTERTAINMENT • LIFESTYLE</p>
+</header>
+
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#music">MUSIC</a>
+    <a href="#albums">ALBUMS</a>
+    <a href="#social">SOCIAL</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<div class="hero" id="home">
+    <small>THE OFFICIAL ARTIST EXPERIENCE</small>
+
+    <h1>MARKUS RIVA</h1>
+
+    <div class="gold-line"></div>
+
+    <p>
+        Singer. Songwriter. Producer. DJ.
+        Discover the music, creativity and world
+        of Markus Riva.
+    </p>
+
+    <div style="margin-top:25px">
+        <a class="btn"
+        href="https://www.youtube.com/@markusRiva"
+        target="_blank">WATCH VIDEOS</a>
+    </div>
+</div>
+
+<section id="about">
+    <h2>ABOUT MARKUS</h2>
+
+    <div class="gold-line"></div>
+
+    <p class="about">
+        Markus Riva, born Miķelis Ļaksa, is a Latvian
+        singer, songwriter, music producer, DJ, actor
+        and television personality.
+
+        Known for his versatility and international
+        musical style, Markus creates music in several
+        languages and connects with audiences around
+        the world.
+    </p>
+</section>
+
+<section id="music">
+    <h2>MUSIC & VIDEOS</h2>
+
+    <p class="subtitle">
+        Explore the sound and creativity of Markus Riva.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>MUSIC</h3>
+            <p>Discover songs, albums and new releases.</p>
+        </div>
+
+        <div class="card">
+            <h3>YOUTUBE</h3>
+            <p>Watch official videos and performances.</p>
+
+            <a class="btn"
+            href="https://www.youtube.com/@markusRiva"
+            target="_blank">WATCH NOW</a>
+        </div>
+
+    </div>
+
+    <!-- SIX SONG MUSIC PLAYER -->
+
+    <div class="music-player-section">
+
+        <h3>LISTEN TO MARKUS RIVA</h3>
+
+        <p class="subtitle">
+            Enjoy music from the VASARA album.
+        </p>
+
+        <iframe
+        src="https://open.spotify.com/embed/album/143IUx6TUVNZHKLhocAeJT?utm_source=generator"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+        </iframe>
+
+        <div class="music-track-list">
+
+            <p>01. Uzvara</p>
+            <p>02. Sauli Šo</p>
+            <p>03. Silueti</p>
+            <p>04. Rozā</p>
+            <p>05. Uzvara, Vol. 2 - Remix</p>
+            <p>06. UZVARA - Roman NeRo Remix</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- UNRELEASED ALBUM SECTION -->
+
+<section id="albums" class="album-section">
+
+<h2>UNRELEASED ALBUMS</h2>
+
+<div class="gold-line"></div>
+
+<p class="subtitle">
+    Exclusive upcoming music projects.
+    Subscribe to stay updated on future releases.
+</p>
+
+<div class="album-grid">
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>01</strong>
+        </div>
+        <div class="album-info">
+            <h3>GOLDEN ERA</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>02</strong>
+        </div>
+        <div class="album-info">
+            <h3>AFTER DARK</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>03</strong>
+        </div>
+        <div class="album-info">
+            <h3>INFINITY</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>04</strong>
+        </div>
+        <div class="album-info">
+            <h3>THE NEW CHAPTER</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>05</strong>
+        </div>
+        <div class="album-info">
+            <h3>NO LIMITS</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+    <div class="album-card">
+        <div class="album-cover">
+            <span>MARKUS RIVA</span>
+            <strong>06</strong>
+        </div>
+        <div class="album-info">
+            <h3>BEYOND THE LIGHTS</h3>
+            <p>UPCOMING ALBUM</p>
+            <span class="album-status">UNRELEASED</span>
+            <br>
+            <a href="#contact" class="subscribe-btn">SUBSCRIBE</a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section id="social">
+    <h2>FOLLOW MARKUS</h2>
+
+    <p class="subtitle">
+        Connect with Markus Riva on social media.
+    </p>
+
+    <div class="social-buttons">
+
+        <a href="https://www.tiktok.com/@markusrivaofficial"
+        target="_blank">TikTok</a>
+
+        <a href="https://www.instagram.com/markusriva/"
+        target="_blank">Instagram</a>
+
+        <a href="https://www.youtube.com/@markusRiva"
+        target="_blank">YouTube</a>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>BUSINESS CONTACT</h2>
+
+    <p class="subtitle">
+        For enquiries and business opportunities.
+    </p>
+
+    <div class="contact-box">
+
+        <h3 style="color:#d8bd82">
+            WHATSAPP BUSINESS
+        </h3>
+
+        <p style="color:#aaa;margin:15px 0">
+            Connect with us directly through WhatsApp.
+        </p>
+
+        <a class="btn whatsapp"
+        href="https://wa.me/18738841077"
+        target="_blank">
+            CHAT ON WHATSAPP
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 <span>MARKUS RIVA</span>. All Rights Reserved.</p>
+
+    <p style="margin-top:8px">
+        MUSIC • PASSION • EXCELLENCE
+    </p>
+
+    <p style="margin-top:8px;font-size:10px">
+        Hero photograph: LTV Ziņu dienests, CC BY 3.0.
+        <a href="https://commons.wikimedia.org/wiki/File:Markus_Riva_(Jan_2025).png"
+        target="_blank" style="color:#d8bd82">Image source</a>
+    </p>
+</footer>
+
+</body>
+</html>
